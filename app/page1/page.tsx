@@ -5,12 +5,12 @@ export default function Page() {
         <div>
             <h1 className="text-3xl text-center">Page1</h1>
             <div className="flex justify-center">
-                <Image src="/m.jpeg" width={300} height={300} alt="player" />
+                <Image src="/v.jpeg" width={300} height={300} alt="player" />
             </div>
 
             
             <div className="text-center">
-                <div>STUDENT661621100130-5</div>
+            <div>STUDENT 661621100130-5</div>
                 <Link href="\page1">Go to page1</Link>
                 <br />
                 <Link href="\page2">Go to page2</Link>
@@ -21,3 +21,4 @@ export default function Page() {
         </div>
     );
 }
+  

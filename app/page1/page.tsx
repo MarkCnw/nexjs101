@@ -1,52 +1,33 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
 
-export default function Page() {
+export default function TechCard() {
   return (
-    <div className="min-h-screen p-8 bg-gray-100">
-      {/* การ์ดหลัก */}
-      <div className="max-w-2xl mx-auto bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl shadow-lg p-6 space-y-4">
-        {/* หัวข้อการ์ด */}
-        <h1 className="text-3xl text-center font-bold text-gray-800">Page1</h1>
+    <div className="max-w-6xl mx-auto p-6">
+      <div className="relative rounded-2xl overflow-hidden bg-gray-900 shadow-lg">
+        <div className="flex flex-col md:flex-row">
+          {/* Image section */}
+          <div className="relative w-full md:w-1/2 h-64 md:h-auto">
+            <Image
+              src="/bernabew.jpg"
+              alt="Santiago Bernabéu Stadium"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
 
-        {/* ส่วนรูปภาพ */}
-        <div className="flex justify-center">
-          <Image 
-            src="/v.jpeg" 
-            width={300} 
-            height={300} 
-            alt="player"
-            className="rounded-lg shadow-md"
-          />
-        </div>
-
-        {/* ข้อมูลนักศึกษา */}
-        <div className="text-center text-gray-700">
-          STUDENT 661621100130-5
-        </div>
-
-        {/* กลุ่มลิงก์ */}
-        <div className="flex flex-col items-center space-y-3">
-          <Link 
-            href="/page1"
-            className="w-full max-w-xs bg-blue-500 hover:bg-blue-600 text-white text-center py-2 px-4 rounded-lg transition-colors duration-200"
-          >
-            Go to page1
-          </Link>
-          
-          <Link
-            href="/page2"
-            className="w-full max-w-xs bg-green-500 hover:bg-green-600 text-white text-center py-2 px-4 rounded-lg transition-colors duration-200"
-          >
-            Go to page2
-          </Link>
-          
-          <Link
-            href="/page3"
-            className="w-full max-w-xs bg-purple-500 hover:bg-purple-600 text-white text-center py-2 px-4 rounded-lg transition-colors duration-200"
-          >
-            Go to page3
-          </Link>
+          {/* Content section */}
+          <div className="w-full md:w-1/2 p-8 md:p-12 bg-gradient-to-r from-gray-900 to-gray-800">
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Santiago Bernabéu Stadium
+            </h1>
+            <p className="text-lg text-gray-400 leading-relaxed">
+              Santiago Bernabéu Stadium is the home of Real Madrid, one of the biggest football clubs in the world. 
+              Located in Madrid, Spain, it has a capacity of over 80,000 seats. The stadium is named after Santiago Bernabéu, a former player and president of the club.
+              <br /><br />
+              It is famous for hosting major football events, including Champions League finals and international tournaments. Recently, it was renovated with a modern retractable roof and high-tech features.
+            </p>
+          </div>
         </div>
       </div>
     </div>
